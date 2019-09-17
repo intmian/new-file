@@ -1,8 +1,8 @@
 ---
-title: <"title">
-date: <data> <time>
-tags: [<"以逗号分割的标题">]
-categories: <"系列">
+title: <title>
+date: <date> <time>
+tags: [<以逗号分割的标题>]
+categories: <系列>
 mathjax: true
 ---
 

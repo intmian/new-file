@@ -12,8 +12,8 @@ type IO interface {
 type Node interface {
 	explain(io IO) string // 将节点中的数据导出，如果需要数据就通过这种方式
 }
-type analyzer interface {
-	GetText(s string)
+type Analyzer interface {
+	SetText(str string)
 	canOut() bool
-	out() (Nodes,error)
+	Out() (Nodes, error)
 }

@@ -13,6 +13,7 @@ import (
 type Nodes struct {
 	nodes []Node
 }
+
 func (n *Nodes) Add(node Node) {
 	n.nodes = append(n.nodes, node)
 }
@@ -45,7 +46,7 @@ type InputNode struct {
 }
 
 func (i *InputNode) explain(io IO) string {
-	io.write(i.s)
+	io.write("请输入 " + i.s)
 	return io.read()
 }
 
@@ -56,5 +57,3 @@ type StrNode struct {
 func (s *StrNode) explain(io IO) string {
 	return s.s
 }
-
-
