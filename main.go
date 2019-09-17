@@ -8,9 +8,5 @@ package main
 import "fileGenerate/tool"
 
 func main() {
-	str := tool.ReadFile(`template\hexo`)
-	a := tool.AnalyserA{}
-	a.SetText(str)
-	nodes, _ := a.Out()
-	print(nodes.Explain(&tool.Stdio{}))
+	print(tool.SimpleFillTemp("hexo"))
 }

@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87f0292b-629d-43ed-9532-ac706330b219" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool/stdio.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool/tool.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/hexo" beforeDir="false" afterPath="$PROJECT_DIR$/template/hexo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/analyzerA.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/analyzerA.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool/interfacers.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/interfacers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/node.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/tool.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/tool.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +27,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -122,6 +117,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="基本实现了解释器和分析器功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本实现了解释器和分析器功能" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -132,7 +131,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/tool/analyzerA.go</url>
-          <line>38</line>
+          <line>42</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

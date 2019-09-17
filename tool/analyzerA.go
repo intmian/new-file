@@ -28,11 +28,17 @@ func (a *AnalyserA) Out() (Nodes, error) {
 	n := Nodes{}
 	length := len(a.ori)
 	for ptr != length {
+		c := a.ori[ptr]
 		if ptr == length-2 {
-			n.Add(textToNode(a.ori[ptr:length]))
+			switch c {
+			case '<', '>':
+				n.Add(textToNode(string(c)))
+			default:
+				n.Add(textToNode(a.ori[ptr:length]))
+			}
+			break
 		}
 
-		c := a.ori[ptr]
 		next := a.ori[ptr+1]
 		switch c {
 		case '<':
@@ -59,7 +65,7 @@ func (a *AnalyserA) Out() (Nodes, error) {
 			}
 		default: // 普通文字
 			right := ptr
-			for !(right == length-1) && (a.ori[right+1] != '<' || (a.ori[right] == '<' && a.ori[right+2] == '<')) {
+			for !(right == length-1) && a.ori[right+1] != '<' && a.ori[right+1] != '>' {
 				right++
 			}
 			n.Add(&StrNode{s: a.ori[ptr : right+1]})
