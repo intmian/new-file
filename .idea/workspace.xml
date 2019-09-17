@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87f0292b-629d-43ed-9532-ac706330b219" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool/analyzerA.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/analyzerA.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool/tool.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/tool.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager" selected="Go Build.go build fileGenerate">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="fileGenerate" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -95,8 +94,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build fileGenerate" />
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build analyzerA.go" />
       </list>
     </recent_temporary>
@@ -119,20 +118,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="基本实现了解释器和分析器功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="基本实现了解释器和分析器功能" />
+    <MESSAGE value="修复了一些bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了一些bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/main.go</url>
-          <line>10</line>
+          <line>18</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tool/analyzerA.go</url>
-          <line>42</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
