@@ -24,6 +24,6 @@ func FillTemp(temp string, a Analyzer, io IO) string {
 }
 
 func SimpleFillTemp(tempName string) string {
-	s := ReadFile(`template\` + tempName)
+	s := ReadFile(tempName)
 	return FillTemp(s, &AnalyserA{}, &StdIOSingle)
 }

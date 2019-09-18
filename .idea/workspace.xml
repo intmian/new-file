@@ -4,6 +4,7 @@
     <list default="true" id="87f0292b-629d-43ed-9532-ac706330b219" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/tool.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/tool.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,14 +120,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="基本实现了解释器和分析器功能" />
     <MESSAGE value="修复了一些bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了一些bug" />
+    <MESSAGE value="完成了简单的gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了简单的gui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/main.go</url>
-          <line>18</line>
+          <line>22</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
