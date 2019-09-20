@@ -4,9 +4,13 @@
 
 ## 如何用
 
-1. 首先下载压缩包[scripts.rar](https://github.com/intmian/new-file/releases/download/1.0/scripts.rar)
-2. 解压后将里面的文件复制进windows文件夹（如果可以接受每次输入程序的绝对路径的话，那就省了
-3. 在待生成文档的目录下用命令行形式（确定命令行当前地址为需要生成的文件的地址）运行程序，按提示操作。
+1. 首先下载压缩包[scripts.rar](https://github.com/intmian/new-file/releases/download/1.1/scripts.rar)
+2. 解压后双击register.exe,会产生两个reg文件
+3. 点击注册即可将程序加入右键菜单。
+4. 当你想要删除程序时，点两下解除注册就可以删除右键菜单中这项。
+5. 在空白处用右键点击背景选择调用模板生成器即可使用。
+
+> 改变程序路径时，应先点击解除注册再从上述第二步开始执行。
 
 ## 模板语法
 
