@@ -73,9 +73,27 @@ func NewSerialInputNode(no int, outerValue map[int]string) *SerialInputNode {
 // @@ 从系列中读取
 type SerialInputNode struct {
 	no         int
+	str        string
+	ifPrimary  bool           // 是否为首要节点
 	outerValue map[int]string // 这个是引用型的，引向nodes的数据
 }
 
 func (s *SerialInputNode) explain(io IO) string {
-	return s.outerValue[s.no]
+	if s.ifPrimary {
+		io.write("请输入: "+s.str)
+		content := io.read()
+		s.outerValue[s.no] = content
+		return content
+	} else  {
+		return s.outerValue[s.no]
+	}
+}
+
+// <file path>
+type FileNode struct {
+	path string
+}
+
+func (f *FileNode) explain(io IO) string {
+	return ReadFile(f.path) // 用相对路径读取命令行目录里面文件
 }

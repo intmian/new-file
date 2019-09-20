@@ -9,6 +9,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func ReadFile(path string) string {
@@ -29,20 +30,38 @@ func SimpleFillTemp(tempName string) string {
 	return FillTemp(s, &AnalyserA{}, &StdIOSingle)
 }
 
-func textToNode(t string, nodes *Nodes) Node {
-	// 因为加入serialnodes 需要外部引用 故加入一个指针
+func (n *Nodes) textToNode(t string) Node {
+	// 因为加入serialNodes 需要外部引用 故加入一个接收者
 	switch t {
 	case "date":
 		return &DataNode{}
 	case "time":
 		return &TimeNode{}
 	default:
-		if t[0] == '@' {
+		length := len(t)
+		if t[0] == '@' { // serialNode
 			if t[1] == '@' {
-				n, _ := strconv.Atoi(t[2:len(t)])
-				return &SerialInputNode{no: n, outerValue: nodes.values}
-			} else {
-				// TODO
+				no, _ := strconv.Atoi(t[2:length])
+				return &SerialInputNode{
+					no: no,
+					outerValue: n.values,
+					ifPrimary: false}
+			} else { // primary node
+				args := strings.Split(t[1:length], " ") // TODO
+				no, err1 := strconv.Atoi(args[0])
+				if err1 != nil {
+					// TODO 模板语法错误
+				}
+				return &SerialInputNode{
+					no:         no,
+					str:        args[1],
+					ifPrimary:  true,
+					outerValue: n.values}
+			}
+		} else {
+			switch t[0:4] {
+			case "file":
+				return &FileNode{path: t[5:length]}
 			}
 		}
 		return &InputNode{t}

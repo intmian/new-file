@@ -33,10 +33,11 @@ func main() {
 	case 1:
 		println("请选择模板")
 		for i, name := range fileNames {
-			fmt.Printf("%d %s\n", i, name)
+			fmt.Printf("%d %s\n", i+1, name)
 		}
 		var no int
 		_, _ = fmt.Scan(&no)
+		no--
 		println("输入文件名")
 		var s string
 		_, _ = fmt.Scan(&s)

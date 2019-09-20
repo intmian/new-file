@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="87f0292b-629d-43ed-9532-ac706330b219" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/周赛模板 hexo.md" beforeDir="false" afterPath="$PROJECT_DIR$/template/周赛模板 hexo.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/analyzerA.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/analyzerA.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/node.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/tool.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/tool.go" afterDir="false" />
@@ -93,6 +92,13 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build tool.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="fileGenerate" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/tool/tool.go" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="fileGenerate" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -104,6 +110,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build fileGenerate" />
+        <item itemvalue="Go Build.go build tool.go" />
         <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build analyzerA.go" />
       </list>
@@ -130,7 +137,8 @@
     <MESSAGE value="基本实现了解释器和分析器功能" />
     <MESSAGE value="修复了一些bug" />
     <MESSAGE value="完成了简单的gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了简单的gui" />
+    <MESSAGE value="添加了系列输入的节点" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了系列输入的节点" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -149,6 +157,16 @@
           <url>file://$PROJECT_DIR$/tool/analyzerA.go</url>
           <line>30</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/tool/node.go</url>
+          <line>97</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/tool/tool.go</url>
+          <line>34</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -32,9 +32,9 @@ func (a *AnalyserA) Out() (Nodes, error) {
 		if ptr == length-2 {
 			switch c {
 			case '<', '>':
-				n.Add(textToNode(string(c), n))
+				n.Add(n.textToNode(string(c)))
 			default:
-				n.Add(textToNode(a.ori[ptr:length], n))
+				n.Add(n.textToNode(a.ori[ptr:length]))
 			}
 			break
 		}
@@ -53,7 +53,7 @@ func (a *AnalyserA) Out() (Nodes, error) {
 						// TODO 语法错误
 					}
 				}
-				n.Add(textToNode(a.ori[ptr+1:right], n))
+				n.Add(n.textToNode(a.ori[ptr+1 : right]))
 				ptr = right + 1
 			}
 		case '>':
