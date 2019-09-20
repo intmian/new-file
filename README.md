@@ -4,7 +4,7 @@
 
 ## 如何用
 
-1. 首先下载压缩包[scripts.rar](https://github.com/intmian/new-file/releases/download/1.1/scripts.rar)
+1. 首先下载[压缩包](https://github.com/intmian/new-file/releases/download/1.1/new_file.rar)
 2. 解压后双击register.exe,会产生两个reg文件
 3. 点击注册即可将程序加入右键菜单。
 4. 当你想要删除程序时，点两下解除注册就可以删除右键菜单中这项。
