@@ -6,6 +6,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -13,6 +14,14 @@ import (
 	"strings"
 )
 
+var bom []byte
+
+func init() {
+	bom = []byte{byte(0xEF), byte(0xBB), byte(0xBF)}
+}
+func AddBom(b []byte) []byte {
+	return bytes.Join([][]byte{bom, b}, []byte(""))
+}
 func main() {
 	reT := `Windows Registry Editor Version 5.00  
 [HKEY_CLASSES_ROOT\Directory\Background\shell\newFile]  
@@ -26,6 +35,7 @@ func main() {
 	exePath += `\main.exe`
 	exePath = strings.ReplaceAll(exePath, `\`, `\\`) // 在reg脚本运行时还要一层转义
 	re := fmt.Sprintf(reT, exePath)
-	_ = ioutil.WriteFile("a注册.reg", []byte(re), 0666)
-	_ = ioutil.WriteFile("a解除注册.reg", []byte(unre), 0666)
+
+	_ = ioutil.WriteFile("注册.reg", AddBom([]byte(re)), 0666)
+	_ = ioutil.WriteFile("解除注册.reg", AddBom([]byte(unre)), 0666)
 }
