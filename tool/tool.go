@@ -8,6 +8,7 @@ package tool
 import (
 	"io/ioutil"
 	"os"
+	"strconv"
 )
 
 func ReadFile(path string) string {
@@ -26,4 +27,25 @@ func FillTemp(temp string, a Analyzer, io IO) string {
 func SimpleFillTemp(tempName string) string {
 	s := ReadFile(tempName)
 	return FillTemp(s, &AnalyserA{}, &StdIOSingle)
+}
+
+func textToNode(t string, nodes *Nodes) Node {
+	// 因为加入serialnodes 需要外部引用 故加入一个指针
+	switch t {
+	case "date":
+		return &DataNode{}
+	case "time":
+		return &TimeNode{}
+	default:
+		if t[0] == '@' {
+			if t[1] == '@' {
+				n, _ := strconv.Atoi(t[2:len(t)])
+				return &SerialInputNode{no: n, outerValue: nodes.values}
+			} else {
+				// TODO
+			}
+		}
+		return &InputNode{t}
+	}
+
 }

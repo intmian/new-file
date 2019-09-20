@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="87f0292b-629d-43ed-9532-ac706330b219" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/周赛模板 hexo.md" beforeDir="false" afterPath="$PROJECT_DIR$/template/周赛模板 hexo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/analyzerA.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/analyzerA.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/node.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/tool.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/tool.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +26,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1QuYt1o23OObBbhumnhBTVnIu1A" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -38,6 +43,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="GoMoveDeclarationDialog.RECENT_KEY">
+      <recent name="$PROJECT_DIR$/tool" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\方家彦\go\src\wordGenerate\base" />
     </key>
@@ -118,6 +126,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="基本实现了解释器和分析器功能" />
     <MESSAGE value="修复了一些bug" />
     <MESSAGE value="完成了简单的gui" />
@@ -130,6 +139,16 @@
           <url>file://$PROJECT_DIR$/main.go</url>
           <line>22</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/main.go</url>
+          <line>42</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/tool/analyzerA.go</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

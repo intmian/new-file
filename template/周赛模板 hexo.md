@@ -8,7 +8,7 @@ mathjax: true
 
 ## 概要
 
-> 比赛链接:[leetcode第151周周赛](https://leetcode-cn.com/contest/weekly-contest-151)
+>> 比赛链接:[leetcode第151周周赛](https://leetcode-cn.com/contest/weekly-contest-151)
 
 |                             题目                             | 难度 |  知识点  |
 | :----------------------------------------------------------: | :--: | :------: |
@@ -17,11 +17,11 @@ mathjax: true
 | [从链表中删去总和值为零的连续节点](https://leetcode-cn.com/contest/weekly-contest-151/problems/remove-zero-sum-consecutive-nodes-from-linked-list) | 中等 |   链表   |
 | [餐盘栈](https://leetcode-cn.com/contest/weekly-contest-151/problems/dinner-plate-stacks) | 困难 |   设计/无   |
 
-<!-- more -->
+<<!-- more -->>
 
-> 注:思路是理想思路,代码有可能是我比赛时写的,就不那么理想.
->
-> 所以代码与思路不一定等价
+>> 注:思路是理想思路,代码有可能是我比赛时写的,就不那么理想.
+>>
+>> 所以代码与思路不一定等价
 
 ## 第一题
 

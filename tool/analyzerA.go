@@ -25,16 +25,16 @@ func (a *AnalyserA) Out() (Nodes, error) {
 		return Nodes{}, errors.New("no")
 	}
 	ptr := 0
-	n := Nodes{}
+	n := NewNodes()
 	length := len(a.ori)
 	for ptr != length {
 		c := a.ori[ptr]
 		if ptr == length-2 {
 			switch c {
 			case '<', '>':
-				n.Add(textToNode(string(c)))
+				n.Add(textToNode(string(c), n))
 			default:
-				n.Add(textToNode(a.ori[ptr:length]))
+				n.Add(textToNode(a.ori[ptr:length], n))
 			}
 			break
 		}
@@ -53,7 +53,7 @@ func (a *AnalyserA) Out() (Nodes, error) {
 						// TODO 语法错误
 					}
 				}
-				n.Add(textToNode(a.ori[ptr+1 : right]))
+				n.Add(textToNode(a.ori[ptr+1:right], n))
 				ptr = right + 1
 			}
 		case '>':
@@ -73,16 +73,5 @@ func (a *AnalyserA) Out() (Nodes, error) {
 		}
 
 	}
-	return n, nil
-}
-func textToNode(t string) Node {
-	switch t {
-	case "date":
-		return &DataNode{}
-	case "time":
-		return &TimeNode{}
-	default:
-		return &InputNode{t}
-	}
-
+	return *n, nil
 }

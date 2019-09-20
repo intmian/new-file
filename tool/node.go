@@ -11,7 +11,12 @@ import (
 )
 
 type Nodes struct {
-	nodes []Node
+	nodes  []Node
+	values map[int]string // 为系列提供外部存储
+}
+
+func NewNodes() *Nodes {
+	return &Nodes{values: make(map[int]string)}
 }
 
 func (n *Nodes) Add(node Node) {
@@ -56,4 +61,21 @@ type StrNode struct {
 
 func (s *StrNode) explain(io IO) string {
 	return s.s
+}
+
+func NewSerialInputNode(no int, outerValue map[int]string) *SerialInputNode {
+	return &SerialInputNode{no: no, outerValue: outerValue}
+}
+
+// <@no des> primary node
+// <@@no>
+// @  需要输入或者更改数据
+// @@ 从系列中读取
+type SerialInputNode struct {
+	no         int
+	outerValue map[int]string // 这个是引用型的，引向nodes的数据
+}
+
+func (s *SerialInputNode) explain(io IO) string {
+	return s.outerValue[s.no]
 }
