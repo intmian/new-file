@@ -6,7 +6,7 @@
 package main
 
 import (
-	"fileGenerate/tool"
+	"new_file/tool"
 	"fmt"
 	"io/ioutil"
 	"os"

@@ -1,5 +1,5 @@
 ---
-title: leetcode contest <第几周> writeup
+title: leetcode contest <@1 第几周> writeup
 date: <date> <time>
 tags: [算法,编程]
 categories: 从零开始的编程之路
@@ -8,7 +8,7 @@ mathjax: true
 
 ## 概要
 
->> 比赛链接:[leetcode第151周周赛](https://leetcode-cn.com/contest/weekly-contest-151)
+>> 比赛链接:[leetcode第<@@1>周周赛](https://leetcode-cn.com/contest/weekly-contest-<@@1>)
 
 |                             题目                             | 难度 |  知识点  |
 | :----------------------------------------------------------: | :--: | :------: |
@@ -32,8 +32,19 @@ mathjax: true
 ### 代码
 
 ```python
+<file 1.py>
+```
+
+## 第二题
+
+### 思路
 
 
+
+### 代码
+
+```python
+<file 2.py>
 ```
 
 ## 第三题
@@ -44,8 +55,7 @@ mathjax: true
 ### 代码
 
 ```python
-
-
+<file 2.py>
 ```
 
 ## 第四题
@@ -57,8 +67,7 @@ mathjax: true
 ### 代码
 
 ```python
-
-
+<file 3.py>
 ```
 
 ## 后记
