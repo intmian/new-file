@@ -13,6 +13,8 @@ func init() {
 	StdIOSingle = Stdio{}
 }
 
+
+// 从文本输入
 type Stdio struct {
 }
 

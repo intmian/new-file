@@ -1,5 +1,5 @@
 /*
-* @Describe:
+* @Describe: 默认的分析器
 * @Author:   mian
 * @Date:     2019/9/17 14:33
  */
@@ -12,6 +12,7 @@ type AnalyserA struct {
 	isPro bool
 }
 
+// 设置分析的源文本
 func (a *AnalyserA) SetText(s string) {
 	a.ori = s
 }
@@ -20,6 +21,7 @@ func (a *AnalyserA) canOut() bool {
 	return a.ori != ""
 }
 
+// 分析过程
 func (a *AnalyserA) Out() (Nodes, error) {
 	if !a.canOut() {
 		return Nodes{}, errors.New("no")

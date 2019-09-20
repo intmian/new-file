@@ -10,6 +10,7 @@ import (
 	"time"
 )
 
+// 节点集
 type Nodes struct {
 	nodes  []Node
 	values map[int]string // 为系列提供外部存储
@@ -19,9 +20,12 @@ func NewNodes() *Nodes {
 	return &Nodes{values: make(map[int]string)}
 }
 
+// 添加节点
 func (n *Nodes) Add(node Node) {
 	n.nodes = append(n.nodes, node)
 }
+
+// 对节点集全部进行解释
 func (n *Nodes) Explain(io IO) string {
 	s := ""
 	for _, n := range n.nodes {
@@ -30,6 +34,7 @@ func (n *Nodes) Explain(io IO) string {
 	return s
 }
 
+// <date>
 type DataNode struct {
 }
 
@@ -38,6 +43,7 @@ func (d *DataNode) explain(io IO) string {
 	return fmt.Sprintf("%4d-%02d-%02d", t.Year(), t.Month(), t.Day())
 }
 
+// <Time>
 type TimeNode struct {
 }
 
@@ -46,6 +52,7 @@ func (t *TimeNode) explain(io IO) string {
 	return fmt.Sprintf("%2d:%2d:%2d", n.Hour(), n.Minute(), n.Second())
 }
 
+// <str>
 type InputNode struct {
 	s string
 }
@@ -80,11 +87,11 @@ type SerialInputNode struct {
 
 func (s *SerialInputNode) explain(io IO) string {
 	if s.ifPrimary {
-		io.write("请输入: "+s.str)
+		io.write("请输入: " + s.str)
 		content := io.read()
 		s.outerValue[s.no] = content
 		return content
-	} else  {
+	} else {
 		return s.outerValue[s.no]
 	}
 }
