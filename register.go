@@ -35,7 +35,7 @@ func main() {
 	exePath += `\main.exe`
 	exePath = strings.ReplaceAll(exePath, `\`, `\\`) // 在reg脚本运行时还要一层转义
 	re := fmt.Sprintf(reT, exePath)
-
+	// 不添加BOM头的话，即使是utf-8的reg，也无法输入中文
 	_ = ioutil.WriteFile("注册.reg", AddBom([]byte(re)), 0666)
 	_ = ioutil.WriteFile("解除注册.reg", AddBom([]byte(unre)), 0666)
 }
